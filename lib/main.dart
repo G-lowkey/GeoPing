@@ -119,7 +119,12 @@ class HomeScreen extends StatelessWidget {
                 width: double.infinity,
                 height: 56,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const AddScheduleScreen()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF6C63FF),
                     shape: RoundedRectangleBorder(
@@ -138,6 +143,51 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+class AddScheduleScreen extends StatelessWidget {
+  const AddScheduleScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF1A1A2E),
+      appBar: AppBar(
+        title: const Text('Add Schedule'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'What time?',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+               onPressed: () async {
+                 final TimeOfDay? picked = await showTimePicker(
+                   context: context,
+                   initialTime: TimeOfDay.now(),
+                 );
+               },
+               style: ElevatedButton.styleFrom(
+                 backgroundColor: const Color(0xFF6C63FF),
+               ),
+               child: const Text(
+                 'Pick a time',
+                 style: TextStyle(color: Colors.white),
+               ),
+            ),
+          ],
         ),
       ),
     );
