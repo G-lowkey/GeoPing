@@ -13,7 +13,7 @@ class GeoPingApp extends StatelessWidget {
       title: 'GeoPing',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF6C63FF)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFE53935)),
         useMaterial3: true,
       ),
       home: const HomeScreen(),
@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF1A1A2E),
+      backgroundColor: const Color(0xFFFFFFFF),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(24.0),
@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
               const Text(
                 'GeoPing 📍',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
                 ),
@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
               const Text(
                 'Automatic location sharing',
                 style: TextStyle(
-                  color: Colors.white54,
+                  color: Colors.black54,
                   fontSize: 16,
                 ),
               ),
@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                 width: double.infinity,
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF6C63FF),
+                  color: const Color(0xFFE53935),
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: const Column(
@@ -65,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                     Text(
                       'Sharing Status',
                       style: TextStyle(
-                        color: Colors.white70,
+                        color: Colors.white,
                         fontSize: 14,
                       ),
                     ),
@@ -85,7 +85,7 @@ class HomeScreen extends StatelessWidget {
               const Text(
                 'Schedules',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
@@ -95,21 +95,21 @@ class HomeScreen extends StatelessWidget {
                 width: double.infinity,
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF16213E),
+                  color: const Color(0xFFF5F5F5),
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: const Column(
                   children: [
-                    Icon(Icons.schedule, color: Colors.white54, size: 40),
+                    Icon(Icons.schedule, color: Colors.black54, size: 40),
                     SizedBox(height: 12),
                     Text(
                       'No schedules yet',
-                      style: TextStyle(color: Colors.white54, fontSize: 16),
+                      style: TextStyle(color: Colors.black54, fontSize: 16),
                     ),
                     SizedBox(height: 4),
                     Text(
                       'Tap + to add one',
-                      style: TextStyle(color: Colors.white38, fontSize: 14),
+                      style: TextStyle(color: Colors.black54, fontSize: 14),
                     ),
                   ],
                 ),
@@ -126,7 +126,7 @@ class HomeScreen extends StatelessWidget {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF6C63FF),
+                    backgroundColor: const Color(0xFFE53935),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16),
                     ),
@@ -154,7 +154,7 @@ class AddScheduleScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF1A1A2E),
+      backgroundColor: const Color(0xFFFFFFFF),
       appBar: AppBar(
         title: const Text('Add Schedule'),
       ),
@@ -166,7 +166,7 @@ class AddScheduleScreen extends StatelessWidget {
             const Text(
               'What time?',
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.black,
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
@@ -180,7 +180,7 @@ class AddScheduleScreen extends StatelessWidget {
                  );
                },
                style: ElevatedButton.styleFrom(
-                 backgroundColor: const Color(0xFF6C63FF),
+                 backgroundColor: const Color(0xFFE53935),
                ),
                child: const Text(
                  'Pick a time',
